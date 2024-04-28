@@ -23,4 +23,11 @@
 
 .container:hover {
 	background-color: var(--blue);
+
+	cursor: pointer;
+}
+
+.container:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
 }

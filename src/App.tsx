@@ -74,8 +74,9 @@ export function App() {
 					<Input
 						onChange={(e) => setInputValue(e.target.value)}
 						value={inputValue}
+						onKeyDown={(e) => e.key === 'Enter' && handleAddTask()}
 					/>
-					<Button onClick={handleAddTask}>
+					<Button onClick={handleAddTask} disabled={inputValue === ''}>
 						Criar
 						<PlusCircle size={16} color='#f2f2f2' weight='bold' />
 					</Button>
